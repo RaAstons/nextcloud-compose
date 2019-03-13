@@ -6,6 +6,8 @@ services:
     restart: always
     volumes:
       - db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=not_used
     env_file:
       - db.env
 
